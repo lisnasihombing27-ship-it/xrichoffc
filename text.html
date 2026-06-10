@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:
+    radial-gradient(circle at top left,#2563eb 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#9333ea 0%,transparent 35%),
+    linear-gradient(135deg,#030712,#0f172a,#020617);
+    overflow-x:hidden;
+}
+
+.card{
+    width:100%;
+    max-width:430px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:30px;
+    padding:30px;
+    text-align:center;
+    color:white;
+
+    box-shadow:
+    0 0 40px rgba(37,99,235,.15),
+    0 0 80px rgba(147,51,234,.1);
+}
+
+.profile{
+    position:relative;
+    width:130px;
+    margin:auto;
+}
+
+.profile img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 20px rgba(59,130,246,.5),
+    0 0 50px rgba(147,51,234,.3);
+}
+
+.online{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:18px;
+    height:18px;
+    background:#22c55e;
+    border-radius:50%;
+    border:3px solid #0f172a;
+}
+
+h1{
+    margin-top:18px;
+    font-size:30px;
+    font-weight:700;
+}
+
+.username{
+    color:#94a3b8;
+    margin-top:5px;
+}
+
+.bio{
+    margin-top:15px;
+    color:#d1d5db;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.quote{
+    margin-top:12px;
+    color:#60a5fa;
+    font-style:italic;
+    font-size:14px;
+}
+
+.badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+}
+
+.badges span{
+    background:rgba(255,255,255,.08);
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:22px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.05);
+    padding:12px;
+    border-radius:15px;
+}
+
+.info-box h3{
+    font-size:14px;
+    color:#60a5fa;
+}
+
+.info-box p{
+    font-size:12px;
+    color:#d1d5db;
+}
+
+.skills{
+    margin-top:25px;
+    text-align:left;
+}
+
+.skills h2{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.skill{
+    margin-bottom:15px;
+}
+
+.skill-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:5px;
+    font-size:14px;
+}
+
+.bar{
+    height:8px;
+    background:#1f2937;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.html{
+    width:60%;
+    background:#38bdf8;
+}
+
+.css{
+    width:50%;
+    background:#a855f7;
+}
+
+.js{
+    width:20%;
+    background:#facc15;
+}
+
+.music{
+    margin-top:20px;
+    background:rgba(255,255,255,.05);
+    padding:15px;
+    border-radius:15px;
+    font-size:14px;
+    color:#d1d5db;
+}
+
+.music span{
+    color:#60a5fa;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:25px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:13px;
+    border-radius:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.wa{
+    background:#22c55e;
+}
+
+.tg{
+    background:#229ED9;
+}
+
+.ig{
+    background:linear-gradient(
+    45deg,
+    #833AB4,
+    #E1306C,
+    #F77737
+    );
+}
+
+.tt{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.footer{
+    margin-top:20px;
+    color:#6b7280;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="profile">
+        <!-- GANTI DENGAN LINK CATBOX -->
+        <img src="https://files.catbox.moe/pivart.jpg">
+        <div class="online"></div>
+    </div>
+
+    <h1>𝐗 𝐑𝐈𝐂𝐇 亗</h1>
+    <div class="username">@RichOffc</div>
+
+    <div class="bio">
+        Hubungi saya di 👇
+    </div>
+
+    <div class="quote">
+        "Dream • Learn • Build"
+    </div>
+
+    <div class="badges">
+        <span>💻 Coding</span>
+        <span>🌐 Web</span>
+        <span>🚀 Learning</span>
+        <span>🎨 Design</span>
+    </div>
+
+    <div class="info">
+        <div class="info-box">
+            <h3>🔥 Status</h3>
+            <p>Learning</p>
+        </div>
+
+        <div class="info-box">
+            <h3>⚡ Focus</h3>
+            <p>Bot Dev</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 Level</h3>
+            <p>Beginner</p>
+        </div>
+    </div>
+
+    <div class="skills">
+        <h2>💻 Coding Skills</h2>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>HTML</span>
+                <span>60%</span>
+            </div>
+            <div class="bar">
+                <div class="fill html"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>JavaScript</span>
+                <span>50%</span>
+            </div>
+            <div class="bar">
+                <div class="fill css"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-top">
+                <span>pyton</span>
+                <span>20%</span>
+            </div>
+            <div class="bar">
+                <div class="fill js"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="music">
+        🎵 Currently Listening<br>
+        <span>Not Playing</span>
+    </div>
+
+    <div class="buttons">
+
+        <a href="https://wa.me/6283114400242" class="btn wa">
+            📱 WhatsApp
+        </a>
+
+        <a href="https://t.me/RichOffc77" class="btn tg">
+            ✈️ Telegram
+        </a>
+
+        <a href="https://instagram.com/richoffc77" class="btn ig">
+            📸 Instagram
+        </a>
+
+        <a href="https://tiktok.com/@777yz1rich" class="btn tt">
+            🎵 TikTok
+        </a>
+
+    </div>
+
+    <div class="footer">
+        Made with ❤️
+    </div>
+
+</div>
+
+</body>
+</html>
